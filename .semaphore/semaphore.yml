@@ -30,6 +30,7 @@ blocks:
             - checkout
             - cache restore
             - make lint
+            - cashe store
   - name: "\U0001F9EA Test Suite"
     dependencies:
       - "\U0001F6E0️ Setup and Cache"
@@ -41,3 +42,4 @@ blocks:
             - checkout
             - cache restore
             - make test
+            - cashe store
