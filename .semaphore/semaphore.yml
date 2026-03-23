@@ -43,5 +43,14 @@ blocks:
             - checkout
             - cache restore
             - pip install --cache-dir .pip_cache -r requirements.txt
-            - make test
-            - cache store
+            - make build
+  - name: Build
+    dependencies:
+      - "\U0001F50D Code Quality"
+      - "\U0001F9EA Test Suite"
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - checkout
+            - make build
