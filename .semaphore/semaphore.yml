@@ -29,6 +29,7 @@ blocks:
           commands:
             - checkout
             - cache restore
+            - pip install --cache-dir .pip_cache -r requirements.txt
             - make lint
             - cashe store
   - name: "\U0001F9EA Test Suite"
@@ -41,5 +42,6 @@ blocks:
           commands:
             - checkout
             - cache restore
+            - pip install --cache-dir .pip_cache -r requirements.txt
             - make test
             - cashe store
